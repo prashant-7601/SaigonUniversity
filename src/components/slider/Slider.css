@@ -1,0 +1,48 @@
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70, 70, 70, 0.25);
+}
+
+.carousel-indicators .active {
+  background-color: #444;
+}
+
+.large-heading {
+  font-size: 4.5rem;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 472px) {
+    font-size: 1.5rem;
+  }
+}
+
+.small-heading,
+.learn-more {
+  font-size: 1.5rem;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 472px) {
+    font-size: 0.875rem;
+  }
+}
+
+.hero img {
+  width: 100%;
+  max-height: 100vh !important;
+  aspect-ratio: 16/9;
+
+  @media (max-width: 900px) {
+    aspect-ratio: 4/3;
+  }
+}

@@ -1,0 +1,56 @@
+.navbar {
+  z-index: 9999;
+  width: 100%;
+  font-size: 1.375rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: translateY(-100%);
+}
+
+.navbar.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none !important;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: translateY(0%);
+
+  .nav-link {
+    color: white !important;
+  }
+}
+
+.navbar.fixed {
+  position: fixed;
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0%);
+
+  .nav-link {
+    color: black !important;
+  }
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  @media (max-width: 576px) {
+    height: 75px;
+    width: 75px;
+  }
+
+  @media (max-width: 400px) {
+    height: 50px;
+    width: 50px;
+  }
+}
