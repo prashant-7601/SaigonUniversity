@@ -1,0 +1,17 @@
+.anti-discrimination-banner {
+    border: 1px solid #ccc;
+
+    .title {
+        font-weight: 600;
+    }
+
+    .description {
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .link {
+        font-size: 1.125rem;
+        color: red;
+    }
+}

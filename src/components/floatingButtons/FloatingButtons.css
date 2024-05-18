@@ -1,0 +1,19 @@
+.floating-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: red;
+  color: white;
+  width: auto;
+  font-size: 1.5rem;
+  right: 0px;
+  bottom: 60px;
+  transform: translateX(70%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  border-radius: 4%;
+}
+
+.floating-btn:hover {
+    transform: translateX(0%);
+}
