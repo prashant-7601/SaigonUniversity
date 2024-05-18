@@ -5,9 +5,13 @@ import Navbar from "react-bootstrap/Navbar";
 import { FaSearch } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
 import "./Navbar.css";
+import { Menu } from "../offcanvas/Menu.offcanavas";
+import { SearchMenu } from "../offcanvas/Search.offcanvas";
 
 export const NavBar = () => {
   const [showFixedNavbar, setShowFixedNavbar] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showSearchMenu, setShowSearchMenu] = useState<boolean>(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
@@ -28,8 +32,8 @@ export const NavBar = () => {
     <Navbar variant={showFixedNavbar ? "light" : "dark"} collapseOnSelect expand="md" className={showFixedNavbar ? "bg-body-tertiary navbar fixed" : "bg-body-tertiary navbar absolute"}>
       <Container>
         <Nav className="d-flex flex-row">
-          <FaBars className="nav__icon mx-3" />
-          <FaSearch className="mx-3" />
+          <FaBars className="nav__icon mx-3 pointer-cursor" onClick={()=>{setShowMenu(true)}}/>
+          <FaSearch className="mx-3 pointer-cursor" onClick={()=>{setShowSearchMenu(true)}}/>
         </Nav>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -53,6 +57,8 @@ export const NavBar = () => {
           </Nav.Link>
         </Nav>
       </Container>
+      <Menu show={showMenu} setShow={setShowMenu} />
+      <SearchMenu show={showSearchMenu} setShow={setShowSearchMenu} />
     </Navbar>
   );
 };
