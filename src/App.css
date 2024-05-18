@@ -14,3 +14,7 @@ li {
   font-weight: 500;
   line-height: 1.2;
 }
+
+.pointer-cursor {
+  cursor: pointer;
+}
